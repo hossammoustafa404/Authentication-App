@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "NODE_ENV=development nodemon --watch ./**/*ts --exec ts-node ./src/index.ts",
-    "build":"tsc",
+    "build": "tsc",
     "start:prod": "NODE_ENV=production node dist/index.js"
   },
   "keywords": [],
@@ -50,6 +50,6 @@
     "@types/helmet": "^4.0.0",
     "@types/joi": "^17.2.3",
     "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.1"
   }
 }
