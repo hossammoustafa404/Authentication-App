@@ -218,7 +218,6 @@ export const resetPasswordService = async (
       );
     }
 
-    // const password = await hash(resetPasswordDto.password);
     // Update user password and invalid reset token
     const { user } = await updateUserService(decode.userId, {
       password: resetPasswordDto.password,
