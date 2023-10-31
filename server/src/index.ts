@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(helmet());
 const corsOptions = {
-  origin: config.client.baseUrl || undefined,
+  origin: config.client.baseUrl,
   credentials: true,
   optionsSuccessStatus: StatusCodes.OK,
 };
