@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(helmet());
 const corsOptions = {
-  origin: config.client.baseUrl,
+  origin: "http://localhost:3000" || config.client.baseUrl,
   credentials: true,
   optionsSuccessStatus: StatusCodes.OK,
 };
