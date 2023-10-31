@@ -18,12 +18,7 @@ export const sendVerifyMail = async (user: SiteUser, token: string) => {
     `,
   };
 
-  transporter.sendMail(mailOptions, (err, info) => {
-    if (err) {
-      throw err;
-    }
-    console.log(info);
-  });
+  await transporter.sendMail(mailOptions);
 };
 
 /**
@@ -42,10 +37,5 @@ export const sendResetPassMail = async (user: SiteUser, token: string) => {
     `,
   };
 
-  transporter.sendMail(mailOptions, (err, info) => {
-    if (err) {
-      throw err;
-    }
-    console.log(info);
-  });
+  await transporter.sendMail(mailOptions);
 };

@@ -32,9 +32,7 @@ export const registerService = async (createUserDto: CreateUserDto) => {
     userId: user.id,
   });
 
-  // Send verify mail
-  const { verifyToken } = await genVerifyToken({ userId: user.id });
-  await sendVerifyMail(user, verifyToken);
+ 
 
   return { user, accessToken, refreshToken };
 };

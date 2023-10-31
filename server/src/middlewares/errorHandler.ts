@@ -42,8 +42,6 @@ const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
-  console.log("Hello Error");
-
   const errObj = {
     message: "Something went wrong",
     status: StatusCodes.INTERNAL_SERVER_ERROR,

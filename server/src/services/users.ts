@@ -6,6 +6,8 @@ import hash from "../lib/hash";
 import { NotFoundError, UnAuthorizedError } from "../lib/errors";
 import getPaginationMetadata from "../lib/getPaginationMetadata";
 import genApiFeatures from "../lib/genApiFeatures";
+import { genVerifyToken } from "../lib/tokens";
+import { sendVerifyMail } from "../lib/nodemailer";
 
 // Reposetries
 const siteUserRepo = AppDataSource.getRepository(SiteUser);
@@ -25,6 +27,21 @@ export const createUserService = async (createUserDto: CreateUserDto) => {
     .values(createUserDto)
     .returning("*")
     .execute();
+
+  // Send verify mail
+  const { verifyToken } = await genVerifyToken({ userId: user.raw[0].id });
+
+  try {
+    await sendVerifyMail(user.raw[0], verifyToken);
+  } catch (error) {
+    await siteUserRepo
+      .createQueryBuilder("site_user")
+      .delete()
+      .where("site_user.id = :userId", { userId: user.raw[0].id })
+      .execute();
+
+    throw error;
+  }
 
   return { user: user.raw[0] };
 };
