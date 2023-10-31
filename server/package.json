@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "NODE_ENV=development nodemon --watch ./**/*ts --exec ts-node ./src/index.ts",
-    "build": "npx typeorm-ts-node-commonjs migration:generate ./src/db/migrations/First -d ./src/config/db.ts && tsc",
+    "build": "npx typeorm-ts-node-commonjs migration:generate ./src/db/migrations/First -d ./src/config/db.ts && npm install && tsc",
     "start:prod": "npx typeorm migration:run -d ./dist/config/db.js && NODE_ENV=production node ./dist/index.js",
     "migration:generate": "npx typeorm-ts-node-commonjs migration:generate ./src/db/migrations/First -d ./src/config/db.ts",
     "migration:run": "npx typeorm-ts-node-commonjs migration:run -d ./src/config/db.ts"
