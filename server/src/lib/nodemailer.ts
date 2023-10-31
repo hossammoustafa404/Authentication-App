@@ -18,7 +18,12 @@ export const sendVerifyMail = async (user: SiteUser, token: string) => {
     `,
   };
 
-  await transporter.sendMail(mailOptions);
+  transporter.sendMail(mailOptions, (err, info) => {
+    if (err) {
+      throw err;
+    }
+    console.log(info);
+  });
 };
 
 /**
