@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import config from "./config";
-import { SiteUser, RefreshToken } from "../entities";
+import { SiteUser, RefreshToken } from "../db/entities";
 
 /**
  * Data source for the database
@@ -15,8 +15,8 @@ export const AppDataSource = new DataSource({
   synchronize: config.app.env === "development" ? true : false,
   logging: false,
   entities: [SiteUser, RefreshToken],
-  subscribers: [],
-  migrations: [],
+  migrations: ["./dist/db/migrations/*.js"],
+  migrationsTableName: "amazing_migrations",
 });
 
 /**

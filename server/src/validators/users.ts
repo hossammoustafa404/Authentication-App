@@ -1,6 +1,6 @@
 // Imports
 import * as Joi from "joi";
-import { userRoles } from "../entities/site_user";
+import { userRoles } from "../db/entities/site_user";
 
 // Params Validator
 const paramsValidator = Joi.object().keys({

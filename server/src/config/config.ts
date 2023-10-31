@@ -73,7 +73,7 @@ const config: Config = {
       expiresIn: +envVars.RESET_TOKEN_EXPIRES_IN_HOURS * 60 * 60 * 1000,
     },
   },
-  
+
   nodemailer: {
     user: envVars.NODEMAILER_USER,
     password: envVars.NODEMAILER_PASSWORD,

@@ -1,7 +1,7 @@
 import * as LocalStrategy from "passport-local";
 // import type { DoneCallback } from "passport";
 import { AppDataSource } from "../db";
-import { SiteUser } from "../../entities";
+import { SiteUser } from "../../db/entities";
 // import { UnAuthorizedError } from "../../lib/errors";
 import * as bcrypt from "bcrypt";
 import { UnAuthorizedError } from "../../lib/errors";

@@ -1,7 +1,7 @@
 import { CreateUserDto } from "../interfaces/users";
 import { createUserService, getUserService, updateUserService } from "./users";
 import { genAuthTokens, genResetToken, genVerifyToken } from "../lib/tokens";
-import { RefreshToken, SiteUser } from "../entities";
+import { RefreshToken, SiteUser } from "../db/entities";
 import * as jwt from "jsonwebtoken";
 import config from "../config/config";
 import { AppDataSource } from "../config/db";

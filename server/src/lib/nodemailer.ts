@@ -1,5 +1,5 @@
 import type { SendMailOptions } from "nodemailer";
-import { SiteUser } from "../entities";
+import { SiteUser } from "../db/entities";
 import transporter from "../config/nodemailer";
 import config from "../config/config";
 

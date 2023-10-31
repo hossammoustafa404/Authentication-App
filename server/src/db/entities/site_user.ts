@@ -8,7 +8,7 @@ import {
 } from "typeorm";
 import { CustomBaseEntity } from "./custom_base_entity";
 import RefreshToken from "./refresh_token";
-import hash from "../lib/hash";
+import hash from "../../lib/hash";
 
 export const userRoles = ["super_admin", "admin", "user"];
 

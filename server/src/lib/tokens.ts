@@ -1,8 +1,8 @@
 import * as jwt from "jsonwebtoken";
 import config from "../config/config";
-import { SiteUser } from "../entities";
+import { SiteUser } from "../db/entities";
 import { AppDataSource } from "../config/db";
-import { RefreshToken } from "../entities";
+import { RefreshToken } from "../db/entities";
 import { getUserService, updateUserService } from "../services/users";
 
 // Payload Interface

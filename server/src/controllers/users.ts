@@ -8,7 +8,7 @@ import {
   getUserService,
   updateUserService,
 } from "../services/users";
-import { SiteUser } from "src/entities";
+import { SiteUser } from "src/db/entities";
 
 /**
  * Create User Controller

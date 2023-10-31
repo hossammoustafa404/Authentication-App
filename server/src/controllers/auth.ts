@@ -11,7 +11,7 @@ import {
 } from "../services/auth";
 import { StatusCodes } from "http-status-codes";
 import config from "../config/config";
-import { SiteUser } from "../entities";
+import { SiteUser } from "../db/entities";
 
 const refreshCookieOptions: CookieOptions = {
   httpOnly: true,

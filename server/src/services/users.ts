@@ -1,5 +1,5 @@
 // Imports
-import SiteUser from "../entities/site_user";
+import SiteUser from "../db/entities/site_user";
 import { CreateUserDto, UpdateUserDto } from "../interfaces/users";
 import { AppDataSource } from "../config/db";
 import hash from "../lib/hash";

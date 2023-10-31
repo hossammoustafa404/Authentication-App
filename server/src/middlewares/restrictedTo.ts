@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
-import { SiteUser } from "../entities";
+import { SiteUser } from "../db/entities";
 import { UnAuthorizedError } from "../lib/errors";
 
 const restrictedTo =
