@@ -3,7 +3,7 @@ import config from "./config";
 
 const transporter = nodermailer.createTransport({
   host: "live.smtp.mailtrap.io",
-  port: 587,
+  port: 2525,
   auth: {
     user: config.nodemailer.user,
     pass: config.nodemailer.password,
