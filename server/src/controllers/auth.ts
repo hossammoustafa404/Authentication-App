@@ -15,8 +15,8 @@ import { SiteUser } from "../db/entities";
 
 const refreshCookieOptions: CookieOptions = {
   httpOnly: true,
-  secure: false,
-  sameSite: "lax",
+  secure: true,
+  sameSite: "none",
   maxAge: config.jwt.refreshToken.expiresIn,
 };
 /**
@@ -68,12 +68,7 @@ export const refreshToken = async (req: Request, res: Response) => {
   res.clearCookie("refresh_token", refreshCookieOptions);
   return res
     .status(StatusCodes.OK)
-    .cookie("refresh_token", refreshToken, {
-      httpOnly: true,
-      secure: false,
-      sameSite: "lax",
-      maxAge: config.jwt.refreshToken.expiresIn,
-    })
+    .cookie("refresh_token", refreshToken, refreshCookieOptions)
     .json({ user, accessToken });
 };
 
