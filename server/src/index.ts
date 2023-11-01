@@ -11,6 +11,7 @@ import passportFn from "./config/passport";
 import * as passport from "passport";
 import * as cookieParser from "cookie-parser";
 import { StatusCodes } from "http-status-codes";
+import fs from "node:fs";
 
 const app = express();
 
