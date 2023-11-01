@@ -1,6 +1,6 @@
 # Authentication-App
 
-An authentication app based on json web token. Refresh rotation approach has been used to build the project.
+An authentication role-based application based on json web token. Refresh rotation approach has been used to build the project.
 
 ## Features
 
@@ -12,6 +12,8 @@ An authentication app based on json web token. Refresh rotation approach has bee
 6.  Logout
 7.  Forget Password
 8.  Reset Password
+9.  Protected Routes
+10. Role Persmissions
 
 ## Built With
 
