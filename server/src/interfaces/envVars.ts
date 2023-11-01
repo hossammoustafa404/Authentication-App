@@ -18,8 +18,7 @@ declare global {
       VERIFY_TOKEN_EXPIRES_IN_HOURS: string;
       RESET_TOKEN_SECRET: string;
       RESET_TOKEN_EXPIRES_IN_HOURS: string;
-      NODEMAILER_USER: string;
-      NODEMAILER_PASSWORD: string;
+      MAILTRAP_API_TOKEN: string;
     }
   }
 }

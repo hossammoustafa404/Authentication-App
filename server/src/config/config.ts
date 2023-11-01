@@ -23,8 +23,7 @@ const envSchema: ObjectSchema = Joi.object()
     VERIFY_TOKEN_EXPIRES_IN_HOURS: Joi.string().required(),
     RESET_TOKEN_SECRET: Joi.string().required(),
     RESET_TOKEN_EXPIRES_IN_HOURS: Joi.string().required(),
-    NODEMAILER_USER: Joi.string().required(),
-    NODEMAILER_PASSWORD: Joi.string().required(),
+    MAILTRAP_API_TOKEN: Joi.string().required(),
   })
   .unknown();
 
@@ -74,9 +73,8 @@ const config: Config = {
     },
   },
 
-  nodemailer: {
-    user: envVars.NODEMAILER_USER,
-    password: envVars.NODEMAILER_PASSWORD,
+  mailtrap: {
+    apiToken: envVars.MAILTRAP_API_TOKEN,
   },
 };
 

@@ -33,9 +33,8 @@ interface Config {
     };
   };
 
-  nodemailer: {
-    user: string;
-    password: string;
+  mailtrap: {
+    apiToken: string;
   };
 }
 

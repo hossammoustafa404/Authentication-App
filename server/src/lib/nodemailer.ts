@@ -10,7 +10,7 @@ import config from "../config/config";
  */
 export const sendVerifyMail = async (user: SiteUser, token: string) => {
   const mailOptions: SendMailOptions = {
-    from: '"Amazing Store" <myname22744@gmail.com>',
+    from: '"Amazing Store" <myname22744@hossam.com>',
     to: user.email,
     subject: "Verify your email...",
     html: `<p>Hello ${user.first_name}, verify your email by clicking this link:</p><br>
@@ -29,7 +29,7 @@ export const sendVerifyMail = async (user: SiteUser, token: string) => {
  */
 export const sendResetPassMail = async (user: SiteUser, token: string) => {
   const mailOptions: SendMailOptions = {
-    from: '"Amazing Store" <myname22744@gmail.com>',
+    from: '"Amazing Store" <myname22744@hossam.com>',
     to: user.email,
     subject: "Reset Your Password...",
     html: `<p>Hello ${user.first_name}, Reset your password by clicking this link:</p><br>
