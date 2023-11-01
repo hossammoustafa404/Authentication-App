@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import ResetPasswordForm from "./_components/ResetPasswordForm";
+
+export const metadata: Metadata = {
+  title: "Reset Password",
+  description: "Reset password page",
+};
 
 const ResetPassword = ({
   params: { resetToken },

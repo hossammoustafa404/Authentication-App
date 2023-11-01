@@ -13,8 +13,8 @@ const VerifyEmailMsg: FC<Props> = ({ className }) => {
   return (
     <>
       {authUser && !authUser?.verified && (
-        <section className={cn(className)}>
-          <div className="container flex items-center justify-center bg-yellow-600">
+        <section className={cn(className, "bg-orange-400")}>
+          <div className="container flex items-center justify-center py-2">
             <p className="text-white">
               Your email is not verified. Go to your email and verfiy it
             </p>

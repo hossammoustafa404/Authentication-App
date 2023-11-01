@@ -11,7 +11,6 @@ import passportFn from "./config/passport";
 import * as passport from "passport";
 import * as cookieParser from "cookie-parser";
 import { StatusCodes } from "http-status-codes";
-import fs from "node:fs";
 
 const app = express();
 
@@ -20,8 +19,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(helmet());
-const corsOptions = {
-  origin: config.client.baseUrl,
+
+const allowedOrigins = [config.client.baseUrl, "http://localhost:3000"];
+const corsOptions: cors.CorsOptions = {
+  origin: (origin, cb) => {
+    if (allowedOrigins.includes(origin)) {
+      cb(null, true);
+    } else {
+      cb(Error("Origin is blocked by cors policy"), false);
+    }
+  },
   credentials: true,
   optionsSuccessStatus: StatusCodes.OK,
 };

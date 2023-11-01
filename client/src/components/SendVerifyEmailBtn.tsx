@@ -21,10 +21,10 @@ const SendVerifyEmailBtn: FC<Props> = ({ className }) => {
   return (
     <Button
       onClick={handleClick}
-      className={cn(className, "text-blue-500 dark:text-blue-300")}
+      className={cn(className, "text-blue-700 dark:text-blue-700 font-bold")}
       variant="link"
     >
-      Resend
+      Resend Email
     </Button>
   );
 };

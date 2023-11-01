@@ -24,6 +24,8 @@ const envSchema: ObjectSchema = Joi.object()
     RESET_TOKEN_SECRET: Joi.string().required(),
     RESET_TOKEN_EXPIRES_IN_HOURS: Joi.string().required(),
     MAILTRAP_API_TOKEN: Joi.string().required(),
+    OUTLOOK_USER: Joi.string().optional(), // Will not use in production
+    OUTLOOK_PASSWORD: Joi.string().optional(), // Will not use in production
   })
   .unknown();
 
@@ -75,6 +77,10 @@ const config: Config = {
 
   mailtrap: {
     apiToken: envVars.MAILTRAP_API_TOKEN,
+  },
+  outlook: {
+    user: envVars.OUTLOOK_USER,
+    password: envVars.OUTLOOK_PASSWORD,
   },
 };
 

@@ -1,4 +1,10 @@
 import Protected from "@components/Protected";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Server Protectd",
+  description: "Server protected page",
+};
 
 const ServerProtected = () => {
   return (

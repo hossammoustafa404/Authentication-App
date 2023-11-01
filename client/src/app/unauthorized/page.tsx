@@ -1,7 +1,10 @@
 import BackBtn from "@components/BackBtn";
-import { buttonVariants } from "@components/ui/Button";
-import { cn } from "@utils";
-import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Unauthorized",
+  description: "Unauthorized page",
+};
 
 const UnAuthorized = () => {
   return (

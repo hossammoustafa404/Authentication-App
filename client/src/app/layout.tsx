@@ -24,8 +24,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ReduxProvider>
             <PersistLogin>
+              <VerifyEmailMsg />
               <MainNavbar />
-              <VerifyEmailMsg className="mb-8" />
               <main className="flex-1">{children}</main>
               <MainFooter />
             </PersistLogin>

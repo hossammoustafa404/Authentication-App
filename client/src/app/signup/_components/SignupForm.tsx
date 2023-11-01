@@ -1,14 +1,11 @@
 "use client";
 
 import { Button } from "@components/ui/Button";
-import registerFormFields, {
-  RegisterFormField,
-} from "@constants/forms/register";
+import registerFormFields from "@constants/forms/register";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DevTool } from "@hookform/devtools";
 import { registerRequest } from "@lib/api/services/auth";
 import { RegisterValidator, registerValidator } from "@lib/zod/auth";
-import { cn } from "@utils";
 import { FC, HTMLAttributes, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AxiosError } from "axios";
@@ -22,7 +19,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@components/ui/Form";
-import { loginFormFields } from "@constants/forms/login";
 import { Input } from "@components/ui/Input";
 import { useAppDispatch } from "@hooks/redux";
 import { userAuthenticated } from "@lib/redux/features/auth";
@@ -30,7 +26,7 @@ import { userAuthenticated } from "@lib/redux/features/auth";
 // Props Interface
 interface props extends HTMLAttributes<HTMLFormElement> {}
 
-const SignupForm: FC<props> = ({ className }) => {
+const SignupForm: FC<props> = () => {
   const [resError, setResError] = useState("");
   const router = useRouter();
   const firstFieldRef = useRef<HTMLInputElement>();

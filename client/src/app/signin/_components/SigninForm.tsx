@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@components/ui/Button";
-import { cn } from "@utils";
 import { FC, HTMLAttributes, useRef, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
@@ -26,7 +25,7 @@ import { useLogin } from "@lib/api/hooks/auth";
 // Props Interface
 interface Props extends HTMLAttributes<HTMLFormElement> {}
 
-const SigninForm: FC<Props> = ({ className }) => {
+const SigninForm: FC<Props> = () => {
   const [resError, setResError] = useState("");
   const firstFieldRef = useRef<HTMLInputElement>();
   const router = useRouter();

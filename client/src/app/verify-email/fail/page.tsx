@@ -1,5 +1,11 @@
 import SendVerifyEmailBtn from "@components/SendVerifyEmailBtn";
 import { XCircle } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Failed Verification",
+  description: "Failed verification page",
+};
 
 const Fail = () => {
   return (

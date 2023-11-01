@@ -19,6 +19,8 @@ declare global {
       RESET_TOKEN_SECRET: string;
       RESET_TOKEN_EXPIRES_IN_HOURS: string;
       MAILTRAP_API_TOKEN: string;
+      OUTLOOK_USER?: string;
+      OUTLOOK_PASSWORD?: string;
     }
   }
 }

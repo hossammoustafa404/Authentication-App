@@ -36,6 +36,11 @@ interface Config {
   mailtrap: {
     apiToken: string;
   };
+
+  outlook?: {
+    user: string;
+    password: string;
+  };
 }
 
 export default Config;

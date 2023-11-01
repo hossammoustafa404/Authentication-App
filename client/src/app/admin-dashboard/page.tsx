@@ -1,4 +1,10 @@
 import Protected from "@components/Protected";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admin Dashboard",
+  description: "Admin dashboard page",
+};
 
 const AdminDashboard = () => {
   return (

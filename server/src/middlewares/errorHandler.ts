@@ -69,8 +69,7 @@ const errorHandler = (
   if (config.app.env === "development") {
     sendDevError(errObj, res);
   } else if (config.app.env === "production") {
-    sendDevError(errObj, res);
-    // sendProdError(errObj, res);
+    sendProdError(errObj, res);
   }
 };
 
