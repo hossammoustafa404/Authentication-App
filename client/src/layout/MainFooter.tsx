@@ -1,7 +1,7 @@
 const MainFooter = () => {
   return (
     <footer className="mt-12">
-      <div className="container bg-black py-4">
+      <div className="container bg-black py-6">
         <p className="text-center">
           Developed by{" "}
           <a
