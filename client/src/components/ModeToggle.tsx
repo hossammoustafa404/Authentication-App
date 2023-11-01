@@ -12,6 +12,10 @@ const ModeToggle: FC<props> = ({ className }) => {
   const { theme, setTheme } = useTheme();
 
   const handleMode = () => {
+    // For test
+    console.log(theme);
+    setTheme("dark");
+
     if (theme === "light") {
       setTheme("dark");
     } else if (theme === "dark") {

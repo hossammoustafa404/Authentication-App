@@ -21,12 +21,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={cn(inter.className, "flex flex-col min-h-screen")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ReduxProvider>
             <PersistLogin>
               <MainNavbar />
