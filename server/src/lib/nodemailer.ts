@@ -43,7 +43,7 @@ export const sendResetPassMail = async (user: SiteUser, token: string) => {
     to: user.email,
     subject: "Reset Your Password...",
     html: `<p>Hello ${user.first_name}, Reset your password by clicking this link:</p><br>
-        <a href="${config.client.baseUrl}/reset-password/${token}">Reset Password</a>
+        <a href="${clientUrl}/reset-password/${token}">Reset Password</a>
     `,
   };
 
