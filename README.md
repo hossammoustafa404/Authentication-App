@@ -17,13 +17,19 @@ A Fullstack authentication role-based application based on json web token. Refre
 
 ## Built With
 
+1.  Typescript
+
+** Frontend **
 1.  Nextjs
 2.  Shadcn
 3.  Redux-Toolkit
 4.  Axios
 5.  React HooK Form
-6.  Expressjs
-7.  Postgresql Using Typeorm orm
-8.  Nodemailer
+
+** Backend **
+1.  Expressjs
+2.  REST API
+3.  Postgresql Using Typeorm orm
+4.  Nodemailer
 
 
