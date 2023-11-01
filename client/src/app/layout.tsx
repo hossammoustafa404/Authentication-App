@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body className={cn(inter.className, "flex flex-col min-h-screen")}>
         <ThemeProvider
           attribute="class"
