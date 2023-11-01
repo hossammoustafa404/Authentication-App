@@ -2,7 +2,7 @@ const MainFooter = () => {
   return (
     <footer className="mt-12 bg-black py-6">
       <div className="container">
-        <p className="text-center">
+        <p className="text-center text-white">
           Developed by{" "}
           <a
             href="https://www.linkedin.com/in/hossam-moustafa-0492a3263/"
