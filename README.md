@@ -1,6 +1,6 @@
-# Authentication-App
+# Fullstack Authentication-App
 
-An authentication role-based application based on json web token. Refresh rotation approach has been used to build the project.
+A Fullstack authentication role-based application based on json web token. Refresh rotation approach has been used to build the project.
 
 ## Features
 
