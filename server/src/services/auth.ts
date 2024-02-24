@@ -32,8 +32,6 @@ export const registerService = async (createUserDto: CreateUserDto) => {
     userId: user.id,
   });
 
- 
-
   return { user, accessToken, refreshToken };
 };
 
@@ -186,6 +184,7 @@ export const forgetPasswordService = async (email: string) => {
 
   // Send reset password mail
   await sendResetPassMail(user, resetToken);
+  sendResetPassMail(user, resetToken);
 
   return { message: "Reset password link has been sent to your email" };
 };

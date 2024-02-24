@@ -15,13 +15,13 @@ const verifyCb = async (email: string, password: string, done: any) => {
     .getRawOne();
 
   if (!user) {
-    return done(new UnAuthorizedError("Wrong email"), false);
+    return done(new UnAuthorizedError("Wrong credentials"), false);
   }
 
   const isPassMatch = await bcrypt.compare(password, user.password);
 
   if (!isPassMatch) {
-    return done(new UnAuthorizedError("Wrong password"));
+    return done(new UnAuthorizedError("Wrong credentials"));
   }
 
   return done(null, user);

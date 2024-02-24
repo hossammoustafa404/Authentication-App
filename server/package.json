@@ -8,7 +8,8 @@
     "start:dev": "NODE_ENV=development nodemon --watch ./**/*ts --exec ts-node ./src/index.ts",
     "build": "npm install -f && tsc",
     "start:prod": "NODE_ENV=production node ./dist/index.js",
-    "migration:generate": "npx typeorm-ts-node-commonjs migration:generate ./src/db/migrations/First -d ./src/config/db.ts"
+    "migration:generate": "npx typeorm-ts-node-commonjs migration:generate ./src/db/migrations/First -d ./src/config/db.ts",
+    "migration:run": "npx typeorm-ts-node-commonjs migration:run -d ./src/config/db.ts"
   },
   "keywords": [],
   "author": "Hossam Moustafa",

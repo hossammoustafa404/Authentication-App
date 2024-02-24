@@ -31,17 +31,7 @@ export const createUserService = async (createUserDto: CreateUserDto) => {
   // Send verify mail
   const { verifyToken } = await genVerifyToken({ userId: user.raw[0].id });
 
-  try {
-    await sendVerifyMail(user.raw[0], verifyToken);
-  } catch (error) {
-    await siteUserRepo
-      .createQueryBuilder("site_user")
-      .delete()
-      .where("site_user.id = :userId", { userId: user.raw[0].id })
-      .execute();
-
-    throw error;
-  }
+  sendVerifyMail(user.raw[0], verifyToken);
 
   return { user: user.raw[0] };
 };
