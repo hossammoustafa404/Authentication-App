@@ -11,7 +11,6 @@ Live demo: [Authentication App](https://authentication-app-wheat.vercel.app/)
 * Verify Email
 * Re-Send Verify Email
 * Login
-* Refresh Token Rotation Approach
 * Logout
 * Forget Password
 * Reset Password
